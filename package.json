@@ -1,0 +1,23 @@
+{
+  "name": "100-days-of-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmmoose20/100-days-of-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmmoose20/100-days-of-code/issues"
+  },
+  "homepage": "https://github.com/gmmoose20/100-days-of-code#readme",
+  "devDependencies": {
+    "eslint": "^7.18.0"
+  }
+}
