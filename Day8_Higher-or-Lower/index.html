@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Higher and Lower</title>
+  <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body>
   <div class="wrapper">
@@ -14,10 +15,16 @@
 
       <div class="button-group">
         <div>
-          <div class="button" id="higher" data-value="higher">&#8613;</div>
+          <button class="btn" id="higher" data-value="higher">&#8613;</button>
+          <p>
+            Higher
+          </p>
         </div>
         <div>
-          <div class="button" id="lower" data-value="lower">&#8615;</div>
+          <button class="btn" id="lower" data-value="lower">&#8615;</button>
+          <p>
+            Lower
+          </p>
         </div>
       </div>
     </div>
@@ -26,5 +33,7 @@
 
     <h3 class="result hide" id="result">Correct</h3>
   </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
