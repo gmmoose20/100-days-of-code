@@ -1,41 +1,40 @@
 <template>
-	<div class="chat-window">
-		<div class="messages">
-			<div class="message" v-for="message in messages" v-bind:key="message.index">
-				<div class="username">{{message.username}}</div>
-				<div class="message-text">{{message.msg}}</div>
-			</div>
-		</div>
-		<form class="input-container" v-on:submit.prevent="sendMessage">
-			<input type="text" v-model="msg">
-			<button v-on:click="sendMessage" v-bind:disabled="!msg">Send</button>
-		</form>
-	</div>
+  <div class="chat-window">
+    <div class="messages">
+      <div class="message" v-for="message in messages" v-bind:key="message.index">
+        <div class="username">{{message.username}}</div>
+        <div class="message-text">{{message.msg}}</div>
+      </div>
+    </div>
+    <form class="input-container" v-on:submit="sendMessage">
+      <input type="text" v-model="msg">
+      <button v-on:click="sendMessage" v-bind:disabled="!msg">Send</button>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
-	name: 'chatroom',
-	props: ['messages'],
-	data: function () {
-		return {
-			msg: ""
-		}
-	},
-	methods: {
-		sendMessage: function () {
-			if (!this.msg) {
-				
-				// alert("Please enter a message");
-				// return;
-			}
-			this.$emit('sendMessage', this.msg);
-			console.log(this.msg);
-			this.msg = "";
-		}
-	}
+  name: 'chatroom',
+  props: ['messages'],
+  data: function () {
+    return {
+      msg: ""
+    }
+  },
+  methods: {
+    sendMessage: function () {
+      if (!this.msg) {
+        alert("Please enter a message..");
+        return;
+      }
+      this.$emit('sendMessage', this.msg);
+      this.msg = "";
+    }
+  }
 }
 </script>
+
 
 <style lang="scss" scoped>
 .chat-window {
