@@ -1,0 +1,22 @@
+{
+  "name": "Day18_Image-Manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "formidable": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  },
+  "keywords": [],
+  "author": "Gm S. <gmmoose17@gmail.com>",
+  "license": "ISC"
+}
