@@ -1,0 +1,62 @@
+@import "_variables.scss";
+
+body {
+  font-family: 'Yusei Magic', Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page_wrapper {
+  header {
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(to top left, $primary 50%, $dark 50%);
+
+    .logo {
+      width: 75px;
+      color: #fff;
+      margin: 25px;
+    }
+    .title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      color: $primary;
+      font-size: 72px;
+
+      .left {
+        font-weight: 100;
+        transform: translate(-50%, -50%);
+      }
+      .right {
+        color: $dark;
+        transform: translate(50%, 50%);
+      }
+    }
+
+    [class^="sub-title"] {
+      font-size: 32px;
+    }
+    
+    .sub-title-top {
+      position: absolute;
+      left: 35%;
+      top: 25%;
+      transform: translateX(-100%);
+      color: $light;
+
+
+    }
+    .sub-title-bottom {
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      color: $dark;
+
+    }
+  }
+}
