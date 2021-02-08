@@ -1,61 +1,187 @@
-@import "_variables.scss";
+@import '_variables.scss';
 
 body {
-  font-family: 'Yusei Magic', Helvetica, sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Saira', Helvetica, sans-serif;
 }
 
-.page_wrapper {
-  header {
-    width: 100vw;
-    height: 100vh;
+.primary {
+  color: $primary;
+}
 
-    background: linear-gradient(to top left, $primary 50%, $dark 50%);
+.dark {
+  color: $dark;
+}
 
-    .logo {
-      width: 75px;
-      color: #fff;
-      margin: 25px;
-    }
-    .title {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+.light {
+  color: $light;
+}
 
-      color: $primary;
-      font-size: 72px;
+.header {
+  width: 100vw;
+  height: 100vh;
 
-      .left {
-        font-weight: 100;
-        transform: translate(-50%, -50%);
-      }
-      .right {
-        color: $dark;
-        transform: translate(50%, 50%);
-      }
-    }
+  background: $primary;
+  background: linear-gradient(to bottom right, $primary 50%, $dark 50%);
 
-    [class^="sub-title"] {
-      font-size: 32px;
-    }
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-template-rows: 150px auto 150px;
+
+  @media screen and(max-width: 767px) {
+    background: linear-gradient(to right, $primary 50%, $dark 50%);
     
-    .sub-title-top {
-      position: absolute;
-      left: 35%;
-      top: 25%;
-      transform: translateX(-100%);
-      color: $light;
+  }
+  .logo {
+    width: 80px;
+    margin: 30px;
+    grid-column: 1/2;
+  }
 
+  label {
+    display: none;
+    
+    position: fixed;
+    z-index: 999;
+    top: 30px;
+    right: 30px;
+    
+    width: 35px;
+    height: 23px;
 
+    input {
+      display: none;
+      
+      &:checked {
+        ~ .hamburger {
+          span {
+            margin: 0;
+            transition: all 0.2s linear;
+
+            &:first-child {
+              transform-origin: 75% 0%;
+              transform: rotate(315deg);
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:last-of-type {
+              transform-origin: 75% 100%;
+              transform: rotate(-315deg);
+            }
+          }
+        }
+      }
     }
-    .sub-title-bottom {
-      position: absolute;
-      left: 50%;
-      top: 70%;
-      color: $dark;
+    .hamburger {
+      span {
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin-bottom: 4px;
+        border-radius: 3px;
+
+        background: $primary;
+        transition: all 0.2s linear;
+
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    @media screen and(max-width:767px) {
+      display: block;
+    }
+  }
+
+  .title-container {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and(max-width: 767px) {
+      grid-column: 1/4;
+      
+    }
+
+    .title {
+      font-size: 102px;
+      font-weight: 900;
+      line-height: 1;
+      margin: 0;
+
+      @media screen and(max-width: 1024px) {
+        font-size: 72px;
+      }
+
+      @media screen and(max-width: 767px) {
+        font-size: 48px;
+      }
+    }
+
+    .sub-title {
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 100;
+
+      &.dark {
+        align-self: flex-start;
+      }
+
+      &.primary {
+        align-self: flex-end;
+      }
+
+      @media screen and(max-width: 767px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .navbar {
+    grid-column: 1/4;
+    grid-row: 3/4;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    @media screen and(max-width: 767px) {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 100vw;
+      flex-direction: column;
+      transition: all 0.2s linear;
+      
+      background: linear-gradient(to right, $primary 50%, $dark 50%);
+
+      &.active {
+        left: 0vw;
+      }
+      
+    }
+    &__link {
+      margin: 0 30px 15px;
+      color: $light;
+      font-weight: 100;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        border-bottom: 2px solid $primary;
+      }
 
     }
   }
