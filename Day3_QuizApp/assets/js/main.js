@@ -19,7 +19,7 @@ const getQuestions = () => {
         }
     };
 
-    request.open('GET', '/questions.json', false);
+    request.open('GET', './questions.json', false);
     request.send();
 };
 const displayQuestion = (question) => {
