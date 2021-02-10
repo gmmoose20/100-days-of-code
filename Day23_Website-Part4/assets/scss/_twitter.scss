@@ -1,0 +1,130 @@
+#twitter {
+	background: linear-gradient(to top left, $twitter-blue 50%, $dark 50%);
+
+  grid-template-columns: 150px 1fr 1fr 200px;
+  grid-template-rows: 150px 1fr 200px;
+
+  .heading {
+    color: $light;
+    grid-column: 2/4;
+
+    @media screen and (max-width: 768px) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  h3 {
+    color: $light;
+    font-size: 32px;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+
+    @media screen and (max-width: 1366px) {
+      font-size: 26px;
+    }
+    @media screen and (max-width: 1366px) {
+      font-size: 22px;
+    }
+  }
+
+  .description {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    color: $light;
+    justify-self: center;
+    width: 100%;
+    max-width: 640px;
+    font-size: 24px;
+    
+
+    a {
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 1366px) {
+      font-size: 22px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      margin-left: 40px;
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-left: 40px;
+      grid-column: auto;
+      grid-row: auto;
+
+    }
+  }
+
+  .twitter-profile {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .thumbnail {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-column: auto;
+      grid-row: auto;
+
+    }
+  
+  }
+   
+
+  .follow {
+    grid-column: 1/5;
+    grid-row: 3/4;
+    
+    .twitter-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+
+      .twitter-logo {
+        width: 100px;
+      }
+
+      p {
+        color: $light;
+        font-size: 22px;
+        margin-left: 25px;
+
+        @media screen and (max-width: 1366px) {
+          font-size: 22px;
+        }
+
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 125px 1fr 1fr 125px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: auto;
+  }
+}
