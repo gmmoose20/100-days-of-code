@@ -1,0 +1,119 @@
+#discord {
+  background: linear-gradient(to bottom right, $discord-blurple 50%, $dark 50%);
+  grid-template-columns: 200px 320px auto 320px 200px;
+  grid-template-rows: 200px auto 200px;
+
+
+
+  .heading {
+    color: $light;
+    grid-column: 1/-1;
+  }
+
+  .eklipse-logo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+
+    .logo {
+      width: 200px;
+      border-radius: 25%;
+      box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    @media screen and (max-width:1600px) {
+      margin-right: 0px;   
+    }
+  }
+
+  .content {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+
+    width: 450px;
+    height: 450px;
+
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    background-color: $discord-blurple;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+
+    p {
+      text-align: justify;
+
+
+      strong {
+        color: $dark;
+      }
+    }
+
+    @media screen and (max-width:1600px) {
+      width: 350px;
+      height: 350px;
+      box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.5);   
+      
+      padding: 50px;
+    }
+
+    @media screen and (max-width: 1366px) {
+      width: 255px;
+      height: 255px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); 
+      
+      display: none;
+    }
+  }
+  .action {
+    grid-column: 4/5;
+    grid-row: 2/3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      line-height: 1;
+    }
+  }
+
+  .discord-link {
+    grid-column: 1/-1;
+    grid-row: -1/-2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .discord-logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .link {
+      color: $light;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    color: $light;
+    font-size: 18px;
+
+    @media screen and (max-width:1600px) {
+      font-size: 14px;    
+    }
+  }
+}
