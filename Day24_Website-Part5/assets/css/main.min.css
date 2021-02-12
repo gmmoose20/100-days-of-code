@@ -106,7 +106,8 @@ body {
       color: #469dca; }
   @media screen and (max-width: 640px) {
     .section {
-      grid-template-columns: 1fr; }
+      grid-template-columns: 1fr;
+      height: auto; }
       .section .heading {
         grid-column: span 1; } }
 
@@ -509,6 +510,21 @@ header .title-container {
   background: linear-gradient(to bottom right, #7289DA 50%, #0c1e2c 50%);
   grid-template-columns: 200px 320px auto 320px 200px;
   grid-template-rows: 200px auto 200px; }
+  @media screen and (max-width: 1367px) {
+    #discord {
+      grid-template-columns: 200px 220px auto 220px 200px;
+      grid-template-rows: 175px auto 175px; } }
+  @media screen and (max-width: 1280px) {
+    #discord {
+      grid-template-columns: 200px 175px auto 175px 200px;
+      grid-template-rows: 150px auto 150px; } }
+  @media screen and (max-width: 1279px) {
+    #discord {
+      grid-template-columns: 170px 175px auto 175px 170px; } }
+  @media screen and (max-width: 960px) {
+    #discord {
+      grid-template-columns: 170px 1fr 1fr 170px;
+      grid-template-rows: none; } }
   #discord .heading {
     color: #f3f3f3;
     grid-column: 1/-1; }
@@ -525,14 +541,26 @@ header .title-container {
         -ms-flex-pack: center;
             justify-content: center;
     margin-right: 100px; }
+    @media screen and (max-width: 960px) {
+      #discord .eklipse-logo {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin-right: 0; } }
+    @media screen and (max-width: 640px) {
+      #discord .eklipse-logo {
+        grid-column: 1/-1;
+        margin: 15px 0; } }
     #discord .eklipse-logo .logo {
       width: 200px;
       border-radius: 25%;
       -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
               box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5); }
-    @media screen and (max-width: 1600px) {
-      #discord .eklipse-logo {
-        margin-right: 0px; } }
+      @media screen and (max-width: 1600px) {
+        #discord .eklipse-logo .logo {
+          margin-right: 0px; } }
+      @media screen and (max-width: 1280px) {
+        #discord .eklipse-logo .logo {
+          width: 200px; } }
   #discord .content {
     grid-column: 3/4;
     grid-row: 2/3;
@@ -568,13 +596,23 @@ header .title-container {
         -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.5);
                 box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.5);
         padding: 50px; } }
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1367px) {
       #discord .content {
-        width: 255px;
-        height: 255px;
+        width: 325px;
+        height: 325px;
         -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
                 box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-        display: none; } }
+        padding: 60px; } }
+    @media screen and (max-width: 960px) {
+      #discord .content {
+        grid-column: 2/4; } }
+    @media screen and (max-width: 640px) {
+      #discord .content {
+        grid-column: 1/-1;
+        width: 300px;
+        height: 300px;
+        padding: 45px;
+        margin: 15px 0; } }
   #discord .action {
     grid-column: 4/5;
     grid-row: 2/3;
@@ -588,7 +626,18 @@ header .title-container {
         -ms-flex-align: center;
             align-items: center; }
     #discord .action p {
-      line-height: 1; }
+      line-height: 1.1; }
+    @media screen and (max-width: 960px) {
+      #discord .action {
+        grid-column: 3/4;
+        grid-row: 3/4; } }
+    @media screen and (max-width: 640px) {
+      #discord .action {
+        grid-column: 1/-1;
+        grid-row: 4/5;
+        margin: 15px 0; }
+        #discord .action p {
+          text-align: center; } }
   #discord .discord-link {
     grid-column: 1/-1;
     grid-row: -1/-2;
@@ -608,13 +657,33 @@ header .title-container {
     #discord .discord-link .discord-logo {
       width: 200px;
       margin-bottom: 30px; }
+      @media screen and (max-width: 1367px) {
+        #discord .discord-link .discord-logo {
+          width: 150px; } }
+      @media screen and (max-width: 1280px) {
+        #discord .discord-link .discord-logo {
+          width: 100px; } }
     #discord .discord-link .link {
       color: #f3f3f3;
       font-size: 20px;
       text-decoration: none; }
+    @media screen and (max-width: 960px) {
+      #discord .discord-link {
+        grid-row: 4/5; } }
+    @media screen and (max-width: 640px) {
+      #discord .discord-link {
+        grid-column: 1/-1;
+        grid-row: 5/6;
+        margin: 15px; } }
   #discord p {
     color: #f3f3f3;
-    font-size: 18px; }
+    font-size: 20px; }
     @media screen and (max-width: 1600px) {
       #discord p {
+        font-size: 16px; } }
+    @media screen and (max-width: 1366px) {
+      #discord p {
         font-size: 14px; } }
+    @media screen and (max-width: 940px) {
+      #discord p {
+        line-height: 1.15; } }

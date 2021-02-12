@@ -129,6 +129,7 @@ body {
 
   @media screen and(max-width: 640px) {
     grid-template-columns: 1fr;
+    height: auto;
 
     .heading {
       grid-column: span 1;
