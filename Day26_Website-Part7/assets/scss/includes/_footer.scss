@@ -1,0 +1,125 @@
+#contact {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $light;
+
+  @media screen and (max-width: 640px) {
+   height: auto;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    
+    padding: 10px;
+    box-sizing: border-box;
+    
+    overflow: auto;
+
+    @media screen and (max-width: 640px) {
+      padding: 25px;
+     }
+
+    h2 {
+      color: $dark;
+      font-size: 72px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+
+      margin: 30px 0;
+
+      @media screen and (max-width: 1366px) {
+        margin: 15px 0;
+      }
+    }
+
+    p {
+      color: $dark;
+      font-size: 28px;
+      line-height: 1.5;
+
+      @media screen and (max-width: 1366px) {
+        font-size: 22px;
+      }
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      height: 100px;
+      margin: 0 auto;
+      
+      background-color: $primary;
+
+      color: $dark;
+      font-size: 42px;
+      line-height: 100px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+
+      box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color: darken($color: $primary, $amount: 5);
+        box-shadow: none;
+      }
+      &:active {
+        background-color: lighten($color: $primary, $amount: 5);
+      }
+
+      @media screen and (max-width: 1366px) {
+        font-size: 36px;
+        height: 75px;
+        line-height: 75px;
+      }
+    }
+
+    h3 {
+      font-size: 42px;
+      font-weight: 700;
+      text-align: center;
+
+      @media screen and (max-width: 1366px) {
+        font-size: 36px;
+      }
+    }
+
+    .sponsors {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .sponsor {
+        width: 180px;
+      height: 180px;
+        background: #fff;
+        margin: 10px;
+        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+        @media screen and (max-width: 1366px) {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+      }
+
+
+    }
+    .ref {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  
+}
