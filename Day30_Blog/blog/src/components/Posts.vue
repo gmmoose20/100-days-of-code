@@ -1,6 +1,9 @@
 <template>
   <div class="posts">
-    <button class="load">
+    <div class="post" v-for="post in posts.slice(6, count)" :key="post._id">
+      <h3>{{ post.title }}</h3>
+    </div>
+    <button class="load" @click="$emit('showMore')" v-if="count < posts.length">
       See More
     </button>
   </div>
@@ -8,7 +11,8 @@
 
 <script>
 export default {
-  name: 'posts'
+  name: 'posts',
+  props: ['posts', 'count']
 }
 </script>
 
@@ -18,6 +22,14 @@ export default {
   max-width: 1280px;
   
   margin: 50px auto;
+
+  .post {
+    display: block;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+  }
 
   .load {
     display: block;

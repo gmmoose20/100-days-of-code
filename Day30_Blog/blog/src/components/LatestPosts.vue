@@ -1,34 +1,36 @@
 <template>
   <section class="latest">
     <h3>Latest Posts</h3>
-    <div class="posts">
+    <div class="posts" v-if="posts.length >= 6">
       <div class="post">
         <div class="image" :style="{ backgroundImage: `url('${require('../assets/post-1-image@2x.png')}')` }"></div>
-        <h4>Plan Ahead</h4>
+        <h4 :title="posts[1].title">{{posts[1].title}}</h4>
       </div>
 
       <div class="post col-2 row-2">
         <div class="image" :style="{ backgroundImage: `url('${require('../assets/post-2-image@2x.png')}')` }"></div>
-        <h4>VueJS Fundamentals</h4>
+        <h4 :title="posts[0].title">{{posts[0].title}}</h4>
       </div>
 
       <div class="post row-2">
         <div class="image" :style="{ backgroundImage: `url('${require('../assets/post-3-image@2x.png')}')` }"></div>
-        <h4>Everything wrong with AI</h4>
+        <h4 :title="posts[2].title">{{posts[2].title}}</h4>
       </div>
       <div class="post row-2">
         <div class="image" :style="{ backgroundImage: `url('${require('../assets/post-4-image@2x.png')}')` }"></div>
-        <h4>#100DaysOfCode</h4>
+        <h4 :title="posts[3].title">{{posts[3].title}}</h4>
       </div>
       <div class="post">
         <div class="image" :style="{ backgroundImage: `url('${require('../assets/post-5-image@2x.png')}')` }"></div>
-        <h4>Node Package Manager</h4>
+        <h4 :title="posts[4].title">{{posts[4].title}}</h4>
       </div>
-
       <div class="post col-2">
         <div class="image" :style="{ backgroundImage: `url('${require('../assets/post-6-image@2x.png')}')` }"></div>
-        <h4>Learn to take a break</h4>
+        <h4 :title="posts[5].title">{{posts[5].title}}</h4>
       </div>
+    </div>
+    <div class="posts" v-else>
+      <p>Not enough posts to display</p>
     </div>
   </section>
 </template>
@@ -36,6 +38,7 @@
 <script>
 export default {
   name: "latestposts",
+  props: ['posts']
 };
 </script>
 
@@ -74,8 +77,14 @@ export default {
         height: 50px;
         line-height: 50px;
         margin: 0;
+        overflow: hidden;
 
+        color: #171717;
         font-size: 20px;
+        font-weight: 400;
+
+        text-overflow: ellipsis;
+
 
       }
 
