@@ -1,14 +1,16 @@
 <template>
 <div>
-  Home
+  <Sounds />
 </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Sounds from '@/components/Sounds'
 
 export default {
   name: 'Home',
-  components: {}
+  components: {
+    Sounds
+  }
 }
 </script>
