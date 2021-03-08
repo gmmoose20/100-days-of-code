@@ -11,6 +11,11 @@
       <v-app-bar class="secondary">
         <v-app-bar-title class="title">Laps</v-app-bar-title>
       </v-app-bar>
+      <v-list>
+        <v-list-item v-for="(lap,index) in laps" :key="index">
+          Lap {{ index + 1 }} : {{ lap.formattedTime }}
+        </v-list-item>
+      </v-list>
     </v-navigation-drawer>
   </nav>
 </template>
@@ -18,6 +23,7 @@
 <script>
 export default {
   name: 'Navbar',
+  props: ['laps'],
   data: () => {
     return {
       isDrawerOpen: false
