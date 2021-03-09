@@ -1,0 +1,14 @@
+{
+  "name": "day35_electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Gm S. <gmmoose17@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.0.8"
+  }
+}
